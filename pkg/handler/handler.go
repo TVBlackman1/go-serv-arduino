@@ -29,5 +29,10 @@ func (h* Handler) InitRoutes() *gin.Engine {
 		news.POST("", h.getNews)
 	}
 
+	devices := router.Group("/devices")
+	{
+		devices.POST("/all-devices", h.getDevices)
+	}
+
 	return router
 }
