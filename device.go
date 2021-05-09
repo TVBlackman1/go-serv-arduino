@@ -1,22 +1,22 @@
 package pack
 
 type Device struct {
-	Name       string
-	ID         string
-	Additional interface{}
+	Name       string      `json:"name"`
+	ID         string      `json:"id"`
+	Additional interface{} `json:"additional"`
 }
 
 type WeatherStation struct {
-	Humidity    int
-	Temperature int
+	Humidity    int `json:"humidity"`
+	Temperature int `json:"temperature"`
 }
 
 type ChickenCoop struct {
-	On         bool
+	On bool `json:"on"`
 }
 
 type Greenhouse struct {
-	Humidity     int
-	SoilMoisture int
-	Temperature  int
+	AirHumidity  int `json:"air_humidity"`
+	SoilMoisture int `json:"soil_moisture"`
+	Temperature  int `json:"temperature"`
 }

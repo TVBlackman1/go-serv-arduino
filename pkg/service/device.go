@@ -3,7 +3,7 @@ package service
 import pack "go-serv-arduino"
 
 type DevicesService struct {
-	Devices        map[string]interface{}
+	Devices map[string]interface{}
 }
 
 func NewDevicesService() *DevicesService {
@@ -22,24 +22,24 @@ func (s *DevicesService) AddDevice(device *pack.Device) {
 func (s *DevicesService) SetDefaultDevices() {
 	s.AddDevice(&pack.Device{
 		Name: "Метеостанция",
-		ID: "weather-station",
+		ID:   "weather-station",
 		Additional: pack.WeatherStation{
 			Humidity:    42,
 			Temperature: 16,
 		},
 	})
 	s.AddDevice(&pack.Device{
-		Name: "Метеостанция",
-		ID: "weather-station",
+		Name: "Теплица",
+		ID:   "greenhouse",
 		Additional: pack.Greenhouse{
-			Humidity:     42,
+			AirHumidity:  42,
 			Temperature:  16,
 			SoilMoisture: 38,
 		},
 	})
 	s.AddDevice(&pack.Device{
-		Name: "Метеостанция",
-		ID: "weather-station",
+		Name: "Курятник",
+		ID:   "chicken-coop",
 		Additional: pack.ChickenCoop{
 			On: true,
 		},
