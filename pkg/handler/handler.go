@@ -26,7 +26,7 @@ func (h* Handler) InitRoutes() *gin.Engine {
 
 	news := router.Group("/news")
 	{
-		news.POST("/news", h.getNews)
+		news.POST("", h.getNews)
 	}
 
 	return router
