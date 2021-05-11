@@ -38,6 +38,15 @@ func (s *DevicesService) SetDefaultDevices() {
 		},
 	})
 	s.AddDevice(&pack.Device{
+		Name: "Сад",
+		ID:   "garden",
+		Additional: pack.Garden{
+			AirHumidity:  62,
+			Temperature:  9,
+			SoilMoisture: 28,
+		},
+	})
+	s.AddDevice(&pack.Device{
 		Name: "Курятник",
 		ID:   "chicken-coop",
 		Additional: pack.ChickenCoop{

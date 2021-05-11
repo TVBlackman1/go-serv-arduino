@@ -20,3 +20,10 @@ type Greenhouse struct {
 	SoilMoisture int `json:"soil_moisture"`
 	Temperature  int `json:"temperature"`
 }
+
+type Garden struct {
+	AirHumidity  int `json:"air_humidity"`
+	SoilMoisture int `json:"soil_moisture"`
+	Temperature  int `json:"temperature"`
+}
+
